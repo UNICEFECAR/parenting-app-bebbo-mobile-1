@@ -12,7 +12,7 @@ import { dataRealmCommon } from '../../database/dbquery/dataRealmCommon';
 import { VideoArticleEntity, VideoArticleEntitySchema } from '../../database/schema/VideoArticleSchema';
 import downloadImages from '../../downloadImages/ImageStorage';
 import LoadableImage from '../../services/LoadableImage';
-import { ArticleHeading, ArticleListContent, RelatedArticleContainer } from './ArticlesStyle';
+import { ArticleHeading, ArticleListContent, RelatedArticleContainer2 } from './ArticlesStyle';
 import ShareFavButtons from './ShareFavButtons';
 const ContainerView = styled.View`
   flex: 1;
@@ -139,9 +139,9 @@ const RelatedVideoArticles = (props: RelatedVideoArticlesProps) => {
       <Pressable onPress={() => { goToArticleDetail(item) }} key={index}
         style={{ flexDirection: 'row' }}
       >
-        <RelatedArticleContainer style={{ backgroundColor: '#fff' }} key={index}>    
+        <RelatedArticleContainer2 style={{ backgroundColor: '#fff'}} key={index}>    
         {/* <LoadableImage style={styles.cardImage} item={item} toggleSwitchVal={toggleSwitchVal} resizeMode={FastImage.resizeMode.cover}/> */}
-        <VideoPlayer selectedPinnedArticleData={item}></VideoPlayer>
+      <VideoPlayer selectedPinnedArticleData={item} aspectRatio={1.55}></VideoPlayer>
           <View style={{ flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
             <View style={{ minHeight: 80, }}>
               <ArticleListContent>
@@ -156,7 +156,7 @@ const RelatedVideoArticles = (props: RelatedVideoArticlesProps) => {
             <ShareFavButtons backgroundColor={'#FFF'} item={item} isFavourite = {((favoriteadvices.findIndex((x:any)=>x == item?.id)) > -1) ? true : false} isAdvice={true}/>
 
           </View>
-        </RelatedArticleContainer>
+        </RelatedArticleContainer2>
       </Pressable>
     )
   };

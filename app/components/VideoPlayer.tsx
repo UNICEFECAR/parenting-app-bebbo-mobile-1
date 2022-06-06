@@ -14,6 +14,7 @@ const VideoPlayer = (props: any) => {
     const [playing, setPlaying] = useState(false);
     const [loading, setLoading] = useState(true);
     let videoType = videoTypeImage;
+    let aspectRatio:any=props.aspectRatio;
     const onReady = useCallback(() => {
       setLoading(false);
     }, []);
@@ -141,11 +142,15 @@ const VideoPlayer = (props: any) => {
                 (<>{videoType == videoTypeVimeo ?
                     <WebView
                         startInLoadingState={true}
+                        scalesPageToFit={true}
                         containerStyle={{
-                            width: '100%',
+                            width:"100%",
                             height: windowWidth*0.565,
-                            aspectRatio: 1.75,
+                            aspectRatio: aspectRatio,
                             alignSelf: 'center',
+                            borderStyle:'solid',
+                            borderWidth:1,
+                            borderColor:"red"
                             // aspectRatio: this.state.aspectRatio,
                             // borderWidth: 5, borderColor: 'blue',
                         }}

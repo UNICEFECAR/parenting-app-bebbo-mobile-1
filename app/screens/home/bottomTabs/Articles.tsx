@@ -178,7 +178,7 @@ const Articles = ({ route, navigation }: Props) => {
     <ArticleListContainer>
       <Pressable onPress={() => { goToArticleDetail(item) }} key={index}>
         {(netInfoval.isConnected == true && item && item.cover_video && item.cover_video.url!="" && item.cover_video.url!=undefined) ? 
-           <VideoPlayer selectedPinnedArticleData={item}></VideoPlayer> 
+           <VideoPlayer selectedPinnedArticleData={item} aspectRatio={1.75}></VideoPlayer> 
           : <LoadableImage style={styles.cardImage} item={item} toggleSwitchVal={toggleSwitchVal} resizeMode={FastImage.resizeMode.cover} />
         }
           {/* <LoadableImage style={styles.cardImage} item={item} toggleSwitchVal={toggleSwitchVal} resizeMode={FastImage.resizeMode.cover} /> */}

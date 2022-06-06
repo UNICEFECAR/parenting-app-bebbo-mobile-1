@@ -92,7 +92,7 @@ const goToVideoArticleDetails = () => {
               source={require('@assets/trash/card3.jpeg')}
               style={{width: '100%', borderRadius: 10}}
             /> */}
-            <VideoPlayer selectedPinnedArticleData={selectedPinnedArticleData}></VideoPlayer>
+            <VideoPlayer selectedPinnedArticleData={selectedPinnedArticleData} aspectRatio={1.75}></VideoPlayer>
           </ShiftFromBottom10>
           {/* <Heading3Center>{t('babyNotificationbyAge',{childName:(activeChild.childName!=null && activeChild.childName!="" && activeChild.childName!=undefined)?activeChild.childName:'',ageInMonth:(activeChild.birthDate!=null && activeChild.birthDate!="" && activeChild.birthDate!=undefined)? getCurrentChildAgeInMonths(t,activeChild.birthDate):''})}</Heading3Center> */}
           <Heading3Center style={{flexShrink:1}} numberOfLines={2}>{selectedPinnedArticleData?.title}</Heading3Center>

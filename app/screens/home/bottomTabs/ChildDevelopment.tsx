@@ -373,8 +373,8 @@ const ChildDevelopment = ({ route, navigation }: Props) => {
                      {
                     Platform.OS=="ios" ?
                     listLoading==true?
-            <VideoPlayer style={{ width: '100%' }} selectedPinnedArticleData={selectedPinnedArticleData}></VideoPlayer>:null
-            :<VideoPlayer style={{ width: '100%' }} selectedPinnedArticleData={selectedPinnedArticleData}></VideoPlayer>
+            <VideoPlayer style={{ width: '100%' }} selectedPinnedArticleData={selectedPinnedArticleData} aspectRatio={1.75}></VideoPlayer>:null
+            :<VideoPlayer style={{ width: '100%' }} selectedPinnedArticleData={selectedPinnedArticleData} aspectRatio={1.75}></VideoPlayer>
                     }
           </Container>
           : null

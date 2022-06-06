@@ -349,7 +349,7 @@ alignItems:'center',justifyContent:'center'}}>
 
   
 
- <VideoPlayer selectedPinnedArticleData={selVideoArticleData}></VideoPlayer>
+ <VideoPlayer selectedPinnedArticleData={selVideoArticleData} aspectRatio={1.75}></VideoPlayer>
 
  <PopupCloseContainer style={{width:windowWidth,height:windowHeight,position:'absolute',zIndex:-1,top:0,}}>
 

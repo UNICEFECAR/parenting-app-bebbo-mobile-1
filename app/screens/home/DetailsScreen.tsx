@@ -417,7 +417,7 @@ console.log(videoIsFocused,"..videoIsFocused");
             <View>
               {
               fromScreen ==="ChildDevelopment" || fromScreen === "Home" || (detailDataToUse && detailDataToUse.cover_video && detailDataToUse.cover_video.url!="" && detailDataToUse.cover_video.url!=undefined) ?
-              videoIsFocused==true?<VideoPlayer selectedPinnedArticleData={detailDataToUse}></VideoPlayer>:null
+              videoIsFocused==true?<VideoPlayer selectedPinnedArticleData={detailDataToUse} aspectRatio={1.75}></VideoPlayer>:null
               :
               detailDataToUse && detailDataToUse.cover_image && detailDataToUse.cover_image.url!="" && detailDataToUse.cover_image.url!=undefined?
               (<LoadableImage style={{width: '100%', height: 200}} item={detailDataToUse} toggleSwitchVal={toggleSwitchVal} resizeMode={FastImage.resizeMode.cover}/>):
